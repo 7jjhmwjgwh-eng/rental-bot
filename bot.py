@@ -8,8 +8,8 @@ from telegram.ext import (
     CallbackQueryHandler, ContextTypes, filters
 )
 
-BOT_TOKEN = "8783242059:AAEmYb3Ew08cesd3qQjS5pJSsRvOEMIZLy8"
-YOUR_CHAT_ID = 1060355277
+BOT_TOKEN = os.getenv("BOT_TOKEN", "")
+YOUR_CHAT_ID = int(os.getenv("CHAT_ID", "1060355277"))
 
 (NAME, PHONE, AMOUNT, DATE, NOTES, PAY_SELECT, PAY_AMOUNT, PAY_NOTE) = range(8)
 
